@@ -1,0 +1,173 @@
+<html lang="en">
+<head>
+<title>Multiple Frames Layout</title>
+<link rel="stylesheet" href="home.css">
+<style>
+    header{
+    background-color: rgb(96, 108, 56);
+}
+footer {
+            margin-top: 30px;
+            text-align: center;
+            color:white;
+            background-color: orange;
+
+        }
+    /* Container for the flipping block */
+.flip-container {
+  perspective: 1000px; /* Adds 3D perspective */
+  width: 500px;
+  height: 500px;
+ 
+}
+
+/* Inner container that flips */
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease; /* Smooth transition for flipping */
+  transform-style: preserve-3d; /* Ensures 3D transformations */
+  
+}
+
+/* Front side of the block */
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hides the back face initially */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin: 0;
+  padding: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Styling for the front side */
+.front {
+  background-color:bisque;
+  color: white;
+}
+
+/* Styling for the back side */
+.back {
+  background-color: brown;
+  color: white;
+  transform: rotateY(180deg); /* Initially rotated to hide it */
+}
+
+/* Flip animation on hover */
+.flip-container:hover .flipper {
+  transform: rotateY(180deg); /* Rotates the block on hover */
+}
+.frame {
+background-color: beige;
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <div class="navbar" >
+            <img src="NEW LOGO 2.png" class="logo" width="150px;">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Counselors</a></li>
+                <li><a href="">Wellness tips</a></li>
+                <li><a href="">Help lines</a></li>
+            </ul>
+           
+    
+        </div>
+        </header>
+    
+    <br>
+    <br>
+    <br>
+   
+    <div class="frame">
+        <div class="content">
+            <table>
+                <tr>
+                    <td><h1>Welcome to <br>
+                        Sangam </h1></td>
+                        <td><img src="sangam logo.png"> </td>
+                </tr>
+            </table>
+           
+        <h2>Where paths converge with mental well-being</h2>
+          
+        </div>
+    </div>
+    <div class="frame" >
+        <div class="content">
+            <table>
+                <tr>
+                    <td>
+                        <div class="flip-container">
+                            <div class="flipper">
+                              <div class="front"><center>
+                            <img src="noun-question-1146880.png" width="150px">
+                        <br>
+                        <h2>What is Sangam ?</h2>
+                    </center></div>
+                              <div class="back">Sangam is a compassionate and inclusive mental health support page dedicated to fostering awareness and providing valuable resources for individuals in Pune and beyond. Our primary mission is to break the stigma surrounding mental health by offering a safe space where people can find support, guidance, and encouragement. Through our platform, we have curated a list of nearby counseling centers in Pune, ensuring that individuals have easy access to professional mental health services when needed. </div>
+                            </div>
+                          </div>
+                    </td>
+                    <td></td>
+                    <td>
+                        <div class="flip-container">
+                            <div class="flipper">
+                              <div class="front"><img src="why.png" width="200px">
+                                <br>
+                                <h2>Why should you ?</h2></div>
+                              <div class="back">Back Side</div>
+                            </div>
+                          </div>
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+    </div>
+    <div class="frame" >
+       
+           <table>
+            <tr>
+                <td><p>
+                    <center>
+                        <h1><q>Mental Health Matters</q></h1>
+                        Mental health is crucial for overall well-being as it encompasses our
+                        emotional, psychological, and social functioning. Just like physical 
+                        health, mental health significantly impacts how we think, feel, and act on
+                         a daily basis. It influences how we handle stress, relate to others, and 
+                         make choices in life. Therefore, prioritizing mental health is essential 
+                         for leading a fulfilling and balanced life.  
+                    </center>
+                </p></td>
+                <td><img src="health.png" width="550px"></td>
+            </tr>
+            </table>
+        </div>
+    </div>
+    <div class="frame" >
+        <div class="content">
+            <h1>Frame 3</h1>
+            <p>This is the content for frame 3.</p>
+            
+        </div>
+    </div>
+    
+</body>
+<footer>
+    <p>&copy; 2024 Social Support Guide. All rights reserved.</p>
+   
+    <br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </footer>
+</html>
